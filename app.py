@@ -12,6 +12,12 @@ import io
 import requests
 import os
 
+# Simpele wachtwoordbeveiliging
+password = st.text_input("Voer wachtwoord in om door te gaan", type="password")
+if password != "RimbaudLeon*1":
+    st.warning("Voer het juiste wachtwoord in.")
+    st.stop()
+
 st.set_page_config(page_title="Erasmus Budget Planner", page_icon="✈️", layout="wide")
 
 # --- SUPABASE DATABASE KOPPELING ---
